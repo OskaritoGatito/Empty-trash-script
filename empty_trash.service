@@ -1,0 +1,10 @@
+[Unit]
+Description=Automaticlly empty trash dir everyday
+Wants=empty_trash.timer
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/empty_trash.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer used by automate empty trash dir service
+Requires=empty_trash.service
+
+[Timer]
+Unit=empty_trash.service
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target
